@@ -1,1 +1,73 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <h1>Password Generator</h1>
+        <div class="display-container">
+
+            <input readonly placeholder="Password" class="display" data-passwordDisplay>
+
+            <button data-copy>
+                <span data-copyMsg></span>
+                <img src="./asset.png" alt="copy" width="18" height="18">
+            </button>
+
+        </div>
+
+        <div class="input-continer">
+
+            <!-- Password length section -->
+            <div class="length-container">
+                <p>Password Length</p>
+                <p data-lengthNumber>0</p>
+            </div>
+
+            <!-- slider -->
+            <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+
+            <!-- checkboxes -->
+            <div>
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Include uppercase letters</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Include lowercase letters</label>
+            </div>  
+
+            <div>
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Include numbers </label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Include symbols </label>
+            </div>
+
+        </div>
+
+        <!-- strength section -->
+
+        <div class="strength-container">
+            <p>strength</p>
+            <div data-indicator></div>
+        </div>
+
+        <!-- generate password -->
+
+        <button class="generateButton">Generate Password</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
